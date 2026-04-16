@@ -450,6 +450,13 @@ section {
 
 .blue-bar   { background: linear-gradient(90deg, #007aff, transparent); }
 .orange-bar { background: linear-gradient(90deg, #f97316, transparent); }
+.green-bar {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.green-proj-icon {
+  color: #22c55e;
+}
 
 .proj-head {
   display: flex;
