@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Archivo", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  /* Warm Cream Palette */
+  --color-cream: #FAF7F3;
+  --color-cream-dark: #F0EDE8;
+  --color-cream-darker: #E5E1DB;
+  
+  /* Charcoal Text */
+  --color-charcoal: #111111;
+  --color-charcoal-light: #333333;
+  --color-charcoal-muted: #888888;
+  
+  /* Warm Accent */
+  --color-terracotta: #C45D3E;
+  --color-terracotta-light: #E8795A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+  }
+  
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background-color: var(--color-cream);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--color-terracotta);
+    color: white;
+  }
+
+  /* Thin editorial dividers */
+  .divider {
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  /* Subtle hover card background */
+  .hover-lift {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Tag pill styles */
+  .tag-pill {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 5px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    color: #555;
+    background: transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    line-height: 1.4;
+  }
+  .tag-pill:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-cream);
+    border-color: var(--color-charcoal);
+  }
+
+  /* Live badge pulse */
+  @keyframes livePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Responsive improvements */
+  @media (max-width: 768px) {
+    .tag-pill {
+      font-size: 10px;
+      padding: 4px 10px;
+    }
+  }
+
+  /* Smooth page transitions */
+  a {
+    transition: color 0.3s ease;
+  }
+
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Hardware accelerated elements */
+  .hardware-accelerated {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Asymmetric Floating Animations */
+  @keyframes bob1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes bob2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+  }
+  @keyframes bob3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  @keyframes bob4 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .bob-1 { animation: bob1 4s ease-in-out infinite; }
+  .bob-2 { animation: bob2 4.5s ease-in-out infinite; }
+  .bob-3 { animation: bob3 3.5s ease-in-out infinite; }
+  .bob-4 { animation: bob4 5.2s ease-in-out infinite; }
+}
