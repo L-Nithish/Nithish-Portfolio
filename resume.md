@@ -1,7 +1,7 @@
-# NITHISH L
+# L. NITHISH KUMAR
 
 **Java Full-Stack Developer**  
-📍 Chennai, India | 📞 +91 [Your Phone Number] | ✉️ agentnithish233@gmail.com  
+📍 Chennai, India | 📞 +91 8015855656 | ✉️ agentnithish233@gmail.com  
 🌐 [Portfolio Website](https://nithish-portfolio-amber.vercel.app) | 💻 [GitHub](https://github.com/l-nithish) | 👔 [LinkedIn](https://linkedin.com)
 
 ---
