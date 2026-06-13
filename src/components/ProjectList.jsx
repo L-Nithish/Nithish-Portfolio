@@ -14,10 +14,10 @@ const projects = [
   },
   {
     num: '02',
-    title: 'InterviewAce AI',
+    title: 'Succession AI',
     description: 'AI-powered interview prep ecosystem with resume analysis, mock interviews, coding sandbox, and recruiter tools.',
     tags: ['Next.js', 'Spring Boot', 'WebSocket', 'OpenAI'],
-    href: '/projects/interviewace-ai',
+    href: '/projects/succession-ai',
     liveUrl: 'https://succession-ai-s4hp.vercel.app',
     isRepoOnly: false,
     image: '/images/interviewace-ai.png',

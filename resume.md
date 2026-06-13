@@ -43,7 +43,7 @@ Results-driven **Java Full-Stack Developer** with a strong academic background i
 * Designed a dynamic **skills gap heatmap** comparing actual vs. target competencies using **Recharts** for real-time SVG analytics visualization.
 * Built a secure backend using Spring Data JPA and PostgreSQL with UUID primary keys and logical soft-deletes.
 
-### **InterviewAce AI — Mock Interview Coaching Ecosystem**
+### **Succession AI — Mock Interview Coaching Ecosystem**
 *Next.js 14, Spring Boot, Spring Security, WebSockets (STOMP), OpenAI API, PostgreSQL* | [Live Site](https://succession-ai-s4hp.vercel.app)
 * Engineered a real-time AI-powered interview coaching application.
 * Designed a **STOMP WebSocket broker** interface to handle low-latency chat sessions between candidate clients and the Spring Boot backend.
