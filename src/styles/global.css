@@ -138,9 +138,9 @@
   .bob-3 { animation: bob3 3.5s ease-in-out infinite; }
   .bob-4 { animation: bob4 5.2s ease-in-out infinite; }
 
-  /* Premium Ambient Background */
+  /* Premium Ambient Background - stretches to full scrollable document height */
   .ambient-bg {
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
@@ -148,30 +148,32 @@
     background-color: var(--color-cream);
   }
 
-  /* Subtle grid lines */
-  .ambient-bg::before {
-    content: "";
-    position: absolute;
+  /* Fixed editorial grid overlay - remains pinned to viewport on scroll */
+  .ambient-grid {
+    position: fixed;
     inset: 0;
+    z-index: 0;
+    pointer-events: none;
     background-size: 80px 80px;
     background-image: 
-      linear-gradient(to right, rgba(17, 17, 17, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(17, 17, 17, 0.02) 1px, transparent 1px);
-    mask-image: radial-gradient(circle at center, black, transparent 90%);
-    -webkit-mask-image: radial-gradient(circle at center, black, transparent 90%);
+      linear-gradient(to right, rgba(17, 17, 17, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 17, 0.015) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black 30%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 95%);
   }
 
-  /* Glowing mesh gradient blobs */
+  /* Glowing mesh gradient blobs - absolute positioned to distribute down the page */
   .ambient-blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(140px);
-    opacity: 0.15;
+    filter: blur(150px);
+    opacity: 0.14;
     will-change: transform;
   }
 
+  /* Blob 1: Top Left (Hero / Landing Section) */
   .blob-1 {
-    top: -10%;
+    top: 5%;
     left: -10%;
     width: 55vw;
     height: 55vw;
@@ -179,8 +181,9 @@
     animation: float-blob-1 25s ease-in-out infinite alternate;
   }
 
+  /* Blob 2: Middle Right (Featured Projects Section) */
   .blob-2 {
-    bottom: -10%;
+    top: 25%;
     right: -10%;
     width: 60vw;
     height: 60vw;
@@ -188,27 +191,58 @@
     animation: float-blob-2 30s ease-in-out infinite alternate;
   }
 
+  /* Blob 3: Center Left (Offerings / Services Section) */
   .blob-3 {
-    top: 35%;
-    right: 15%;
-    width: 45vw;
-    height: 45vw;
+    top: 50%;
+    left: -15%;
+    width: 50vw;
+    height: 50vw;
     background-color: var(--color-terracotta-light);
-    animation: float-blob-3 20s ease-in-out infinite alternate;
+    animation: float-blob-3 22s ease-in-out infinite alternate;
+  }
+
+  /* Blob 4: Lower Right (Experience / Career Timeline) */
+  .blob-4 {
+    top: 70%;
+    right: -5%;
+    width: 55vw;
+    height: 55vw;
+    background-color: #E2B65C; /* Warm gold */
+    animation: float-blob-4 28s ease-in-out infinite alternate;
+  }
+
+  /* Blob 5: Bottom Left (Contact Form Section) */
+  .blob-5 {
+    top: 88%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background-color: var(--color-terracotta);
+    animation: float-blob-5 20s ease-in-out infinite alternate;
   }
 
   @keyframes float-blob-1 {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(120px, 80px) scale(1.1); }
+    100% { transform: translate(100px, 60px) scale(1.1); }
   }
 
   @keyframes float-blob-2 {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-150px, -90px) scale(1.05); }
+    100% { transform: translate(-120px, -70px) scale(1.05); }
   }
 
   @keyframes float-blob-3 {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-80px, 120px) scale(1.15); }
+    100% { transform: translate(80px, 90px) scale(1.12); }
+  }
+
+  @keyframes float-blob-4 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-90px, 80px) scale(1.08); }
+  }
+
+  @keyframes float-blob-5 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(70px, -60px) scale(1.15); }
   }
 }
