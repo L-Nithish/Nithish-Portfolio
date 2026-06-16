@@ -137,4 +137,78 @@
   .bob-2 { animation: bob2 4.5s ease-in-out infinite; }
   .bob-3 { animation: bob3 3.5s ease-in-out infinite; }
   .bob-4 { animation: bob4 5.2s ease-in-out infinite; }
+
+  /* Premium Ambient Background */
+  .ambient-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+    background-color: var(--color-cream);
+  }
+
+  /* Subtle grid lines */
+  .ambient-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: 80px 80px;
+    background-image: 
+      linear-gradient(to right, rgba(17, 17, 17, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 17, 0.02) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, black, transparent 90%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 90%);
+  }
+
+  /* Glowing mesh gradient blobs */
+  .ambient-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.15;
+    will-change: transform;
+  }
+
+  .blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 55vw;
+    height: 55vw;
+    background-color: var(--color-terracotta);
+    animation: float-blob-1 25s ease-in-out infinite alternate;
+  }
+
+  .blob-2 {
+    bottom: -10%;
+    right: -10%;
+    width: 60vw;
+    height: 60vw;
+    background-color: #E2B65C; /* Warm gold */
+    animation: float-blob-2 30s ease-in-out infinite alternate;
+  }
+
+  .blob-3 {
+    top: 35%;
+    right: 15%;
+    width: 45vw;
+    height: 45vw;
+    background-color: var(--color-terracotta-light);
+    animation: float-blob-3 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes float-blob-1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(120px, 80px) scale(1.1); }
+  }
+
+  @keyframes float-blob-2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-150px, -90px) scale(1.05); }
+  }
+
+  @keyframes float-blob-3 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-80px, 120px) scale(1.15); }
+  }
 }
