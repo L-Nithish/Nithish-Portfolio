@@ -45,6 +45,17 @@ const projects = [
     image: '/images/movie-explorer.png',
     type: 'Web App',
   },
+  {
+    num: '05',
+    title: 'Cricket Evolution',
+    description: 'A premium, highly interactive editorial portal dedicated to teaching the rich history, rules, and formats of cricket, featuring 3D parallax scrolling, interactive DRS simulation, and fluid page transitions.',
+    tags: ['Next.js', 'React', 'CSS', 'Vanilla JS'],
+    href: '/projects/cricket-evolution',
+    liveUrl: 'https://cricket-evolution-l-nithish.vercel.app',
+    isRepoOnly: false,
+    image: '/images/cricket-evolution.png',
+    type: 'Interactive Web App',
+  },
 ];
 
 export default function ProjectList({ showAll = false }) {

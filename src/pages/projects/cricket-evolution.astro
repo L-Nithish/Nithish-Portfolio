@@ -1,0 +1,151 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.jsx';
+import ScrollReveal from '../../components/ScrollReveal.jsx';
+---
+
+<Layout title="Cricket Evolution — Nithish">
+  <Navbar client:load />
+
+  <article class="pt-[72px]">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 py-16 md:py-28">
+      
+      <ScrollReveal client:load>
+        <a href="/projects" class="inline-flex items-center gap-2 text-[12px] font-medium tracking-[0.06em] uppercase text-charcoal-muted hover:text-charcoal transition-colors duration-300 mb-14" style="font-family: Inter, sans-serif;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          All Projects
+        </a>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.1}>
+        <div class="mb-14 md:mb-20">
+          <span class="text-[11px] font-medium tracking-[0.12em] uppercase text-charcoal-muted block mb-4" style="font-family: Inter, sans-serif;">Project 05</span>
+          <h1 class="text-[clamp(2.2rem,5vw,4.5rem)] font-800 tracking-[-0.03em] leading-[0.95] mb-6" style="font-family: Archivo, sans-serif;">
+            Cricket Evolution
+          </h1>
+          <p class="text-[15px] text-charcoal-muted max-w-[500px] leading-[1.8] mb-6" style="font-family: Inter, sans-serif; font-weight: 300;">
+            A premium, highly interactive editorial portal dedicated to teaching the rich history, rules, and formats of cricket, featuring 3D parallax scrolling, interactive DRS simulation, and fluid page transitions.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="tag-pill">Next.js</span>
+            <span class="tag-pill">React</span>
+            <span class="tag-pill">CSS</span>
+            <span class="tag-pill">Vanilla JS</span>
+          </div>
+          <!-- Live buttons -->
+          <div class="flex flex-wrap items-center gap-3">
+            <a
+              href="https://cricket-evolution-l-nithish.vercel.app"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-[12px] font-medium tracking-[0.06em] uppercase px-6 py-3 rounded-full bg-terracotta text-white hover:bg-terracotta-light transition-all duration-300"
+              style="font-family: Inter, sans-serif;"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-white/80 animate-pulse"></span>
+              View Live Site
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+            <a
+              href="https://github.com/l-nithish/cricket-evolution"
+              target="_blank"
+              class="inline-flex items-center gap-2 text-[12px] font-medium tracking-[0.06em] uppercase px-6 py-3 rounded-full border border-charcoal/15 text-charcoal-light hover:border-charcoal hover:text-charcoal transition-all duration-300"
+              style="font-family: Inter, sans-serif;"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.72.08-.72 1.2.08 1.82 1.22 1.82 1.22 1.06 1.82 2.78 1.3 3.46 1 .1-.77.42-1.3.76-1.6-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.46-2.36 1.22-3.2-.12-.3-.53-1.52.12-3.16 0 0 1-.32 3.3 1.22a11.5 11.5 0 013-.4c1.02.004 2.04.14 3 .4 2.28-1.54 3.28-1.22 3.28-1.22.66 1.64.24 2.86.12 3.16.76.84 1.22 1.9 1.22 3.2 0 4.58-2.8 5.6-5.48 5.9.44.38.82 1.1.82 2.22v3.3c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <div class="grid md:grid-cols-12 gap-10 md:gap-6">
+        <aside class="md:col-span-3">
+          <ScrollReveal client:visible>
+            <div class="space-y-7">
+              <div>
+                <h4 class="text-[11px] font-medium tracking-[0.1em] uppercase text-charcoal-muted mb-2" style="font-family: Inter, sans-serif;">Role</h4>
+                <p class="text-[14px] text-charcoal-light" style="font-family: Inter, sans-serif;">Lead Developer & Designer</p>
+              </div>
+              <div>
+                <h4 class="text-[11px] font-medium tracking-[0.1em] uppercase text-charcoal-muted mb-2" style="font-family: Inter, sans-serif;">Timeline</h4>
+                <p class="text-[14px] text-charcoal-light" style="font-family: Inter, sans-serif;">June 2026</p>
+              </div>
+              <div>
+                <h4 class="text-[11px] font-medium tracking-[0.1em] uppercase text-charcoal-muted mb-2" style="font-family: Inter, sans-serif;">Type</h4>
+                <p class="text-[14px] text-charcoal-light" style="font-family: Inter, sans-serif;">Editorial Web App</p>
+              </div>
+              <div>
+                <h4 class="text-[11px] font-medium tracking-[0.1em] uppercase text-charcoal-muted mb-2" style="font-family: Inter, sans-serif;">Status</h4>
+                <span class="inline-flex items-center gap-1.5 text-[12px] font-semibold text-green-700" style="font-family: Inter, sans-serif;">
+                  <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  Live on Vercel
+                </span>
+              </div>
+            </div>
+          </ScrollReveal>
+        </aside>
+
+        <div class="md:col-span-9 md:col-start-5">
+          <div class="max-w-[600px]" style="font-family: Inter, sans-serif;">
+            <ScrollReveal client:visible>
+              <h3 class="text-[clamp(1.2rem,2vw,1.6rem)] font-600 tracking-[-0.01em] mb-4" style="font-family: Archivo, sans-serif;">Overview</h3>
+              <p class="text-[15px] leading-[1.9] text-charcoal-light font-light mb-4">
+                Cricket Evolution is an immersive, content-rich digital experience designed to introduce newcomers to the game of cricket. Modeled after high-end digital sports publications, the application balances large-impact typography with a sleek, dark-themed editorial layout.
+              </p>
+              <p class="text-[15px] leading-[1.9] text-charcoal-light font-light">
+                The portal features a full-length, interactive history timeline covering 500 years of the sport, a comprehensive rulebook with an interactive DRS simulation, and detailed player profiles utilizing 3D hover-responsive action cutouts.
+              </p>
+            </ScrollReveal>
+
+            <div class="divider my-10"></div>
+
+            <ScrollReveal client:visible>
+              <h3 class="text-[clamp(1.2rem,2vw,1.6rem)] font-600 tracking-[-0.01em] mb-4" style="font-family: Archivo, sans-serif;">Key Features</h3>
+              <ul class="space-y-3">
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Immersive 500-year history timeline with scroll-reveal animations
+                </li>
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Interactive Decision Review System (DRS) simulator with ball-tracking path controls
+                </li>
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Visual guides explaining run scoring, creases, wickets, and all 10 dismissal types
+                </li>
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Comprehensive records and Hall of Fame panels featuring 3D player action cutouts
+                </li>
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Dynamic 3D parallax background scrolling for realistic depth transitions
+                </li>
+                <li class="text-[14px] leading-[1.8] text-charcoal-light font-light flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-terracotta mt-2 flex-shrink-0"></span>
+                  Modern floating glassmorphism navigation menu dashboard
+                </li>
+              </ul>
+            </ScrollReveal>
+
+            <div class="divider my-10"></div>
+
+            <ScrollReveal client:visible>
+              <h3 class="text-[clamp(1.2rem,2vw,1.6rem)] font-600 tracking-[-0.01em] mb-4" style="font-family: Archivo, sans-serif;">Technical Approach</h3>
+              <p class="text-[15px] leading-[1.9] text-charcoal-light font-light">
+                Built as a Next.js Single Page App to handle smooth routing and transitions without page reloads. Scroll-based parallax calculations are managed in React, and styling is written entirely in Vanilla CSS to support custom animation keyframes and layouts. Custom background images were created using generative Stitch AI to fit the editorial aesthetic of the site.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <footer class="border-t border-charcoal/[0.06] py-8">
+    <div class="max-w-[1200px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="text-[12px] text-charcoal-muted tracking-[0.04em]" style="font-family: Inter, sans-serif;">© 2026 Nithish</span>
+      <a href="/projects" class="text-[12px] text-charcoal-muted hover:text-charcoal tracking-[0.04em] uppercase transition-colors duration-300" style="font-family: Inter, sans-serif;">Back to Projects</a>
+    </div>
+  </footer>
+</Layout>
