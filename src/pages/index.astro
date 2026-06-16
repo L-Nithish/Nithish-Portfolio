@@ -161,7 +161,7 @@ const featuredSkills = [
 
         <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 pt-2">
           <ScrollReveal client:visible delay={0.1}>
-            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-[#FAF7F3] hover:-translate-y-1 transition-all duration-300">
+            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-cream-dark hover:-translate-y-1 transition-all duration-300">
               <span class="text-[10px] font-bold text-terracotta tracking-[0.06em] uppercase block mb-3" style="font-family: Inter, sans-serif;">01 / Frontend</span>
               <h3 class="text-[1.2rem] font-600 mb-2" style="font-family: Archivo, sans-serif;">Frontend Engineering</h3>
               <p class="text-[13px] text-charcoal-muted leading-[1.8] font-light" style="font-family: Inter, sans-serif;">
@@ -171,7 +171,7 @@ const featuredSkills = [
           </ScrollReveal>
 
           <ScrollReveal client:visible delay={0.15}>
-            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-[#FAF7F3] hover:-translate-y-1 transition-all duration-300">
+            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-cream-dark hover:-translate-y-1 transition-all duration-300">
               <span class="text-[10px] font-bold text-terracotta tracking-[0.06em] uppercase block mb-3" style="font-family: Inter, sans-serif;">02 / Backend</span>
               <h3 class="text-[1.2rem] font-600 mb-2" style="font-family: Archivo, sans-serif;">Robust Backend APIs</h3>
               <p class="text-[13px] text-charcoal-muted leading-[1.8] font-light" style="font-family: Inter, sans-serif;">
@@ -181,7 +181,7 @@ const featuredSkills = [
           </ScrollReveal>
 
           <ScrollReveal client:visible delay={0.2}>
-            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-[#FAF7F3] hover:-translate-y-1 transition-all duration-300">
+            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-cream-dark hover:-translate-y-1 transition-all duration-300">
               <span class="text-[10px] font-bold text-terracotta tracking-[0.06em] uppercase block mb-3" style="font-family: Inter, sans-serif;">03 / Databases</span>
               <h3 class="text-[1.2rem] font-600 mb-2" style="font-family: Archivo, sans-serif;">Database Architecture</h3>
               <p class="text-[13px] text-charcoal-muted leading-[1.8] font-light" style="font-family: Inter, sans-serif;">
@@ -191,7 +191,7 @@ const featuredSkills = [
           </ScrollReveal>
 
           <ScrollReveal client:visible delay={0.25}>
-            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-[#FAF7F3] hover:-translate-y-1 transition-all duration-300">
+            <div class="group border border-charcoal/5 hover:border-terracotta/20 rounded-2xl p-6 bg-cream-dark hover:-translate-y-1 transition-all duration-300">
               <span class="text-[10px] font-bold text-terracotta tracking-[0.06em] uppercase block mb-3" style="font-family: Inter, sans-serif;">04 / Architecture</span>
               <h3 class="text-[1.2rem] font-600 mb-2" style="font-family: Archivo, sans-serif;">Product Direction</h3>
               <p class="text-[13px] text-charcoal-muted leading-[1.8] font-light" style="font-family: Inter, sans-serif;">
@@ -235,7 +235,7 @@ const featuredSkills = [
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {featuredSkills.map((skill, index) => (
               <ScrollReveal client:visible delay={index * 0.05}>
-                <div class={`flex items-center gap-3 p-4 bg-[#FAF7F3] border border-charcoal/8 hover:border-terracotta/20 rounded-2xl shadow-xs hover:shadow-sm transition-all duration-300 hover:-translate-y-1.5 ${skill.floatClass} cursor-default`}>
+                <div class={`flex items-center gap-3 p-4 bg-cream-dark border border-charcoal/8 hover:border-terracotta/20 rounded-2xl shadow-xs hover:shadow-sm transition-all duration-300 hover:-translate-y-1.5 ${skill.floatClass} cursor-default`}>
                   <div class="w-9 h-9 rounded-xl bg-charcoal/4 flex items-center justify-center flex-shrink-0" set:html={skill.logo} />
                   <div>
                     <h4 class="text-[13px] font-semibold text-charcoal leading-tight" style="font-family: Archivo, sans-serif;">
@@ -381,7 +381,7 @@ const featuredSkills = [
                   name="subject" 
                   required
                   placeholder="Your Name"
-                  class="w-full bg-[#FAF7F3] border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 font-light"
+                  class="w-full bg-transparent border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 font-light"
                 />
               </div>
 
@@ -392,7 +392,7 @@ const featuredSkills = [
                   id="email" 
                   required
                   placeholder="Your Email Address"
-                  class="w-full bg-[#FAF7F3] border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 font-light"
+                  class="w-full bg-transparent border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 font-light"
                 />
               </div>
 
@@ -404,7 +404,7 @@ const featuredSkills = [
                   rows="4" 
                   required
                   placeholder="Tell me about what you want to build..."
-                  class="w-full bg-[#FAF7F3] border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 resize-none font-light"
+                  class="w-full bg-transparent border-b border-charcoal/15 py-3 text-[14px] text-charcoal focus:border-terracotta focus:outline-none transition-colors placeholder:text-charcoal-muted/40 resize-none font-light"
                 ></textarea>
               </div>
 

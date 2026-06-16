@@ -24,9 +24,9 @@ export default function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out"
         style={{
-          backgroundColor: isScrolled ? 'rgba(250, 247, 243, 0.85)' : 'transparent',
+          backgroundColor: isScrolled ? 'rgba(10, 10, 12, 0.85)' : 'transparent',
           backdropFilter: isScrolled ? 'blur(20px) saturate(180%)' : 'none',
-          borderBottom: isScrolled ? '1px solid rgba(17, 17, 17, 0.06)' : '1px solid transparent',
+          borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.06)' : '1px solid transparent',
         }}
       >
         <div className="max-w-[1200px] mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
@@ -53,7 +53,7 @@ export default function Navbar() {
                     fontFamily: 'Inter, sans-serif',
                     color: isActive ? '#C45D3E' : '#888888',
                   }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#111111'}
+                  onMouseEnter={e => e.currentTarget.style.color = '#FFFFFF'}
                   onMouseLeave={e => e.currentTarget.style.color = isActive ? '#C45D3E' : '#888888'}
                 >
                   {link.label}
@@ -71,17 +71,19 @@ export default function Navbar() {
               className="text-[12px] font-medium tracking-[0.06em] uppercase px-5 py-2.5 rounded-full transition-all duration-300"
               style={{
                 fontFamily: 'Inter, sans-serif',
-                backgroundColor: '#111111',
-                color: '#FAF7F3',
-                border: '1px solid #111111',
+                backgroundColor: '#FFFFFF',
+                color: '#060608',
+                border: '1px solid #FFFFFF',
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.backgroundColor = '#C45D3E';
                 e.currentTarget.style.borderColor = '#C45D3E';
+                e.currentTarget.style.color = '#FFFFFF';
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.backgroundColor = '#111111';
-                e.currentTarget.style.borderColor = '#111111';
+                e.currentTarget.style.backgroundColor = '#FFFFFF';
+                e.currentTarget.style.borderColor = '#FFFFFF';
+                e.currentTarget.style.color = '#060608';
               }}
             >
               Contact
@@ -120,7 +122,7 @@ export default function Navbar() {
       <div
         className="fixed inset-0 z-40 md:hidden flex flex-col items-center justify-center transition-all duration-500"
         style={{
-          backgroundColor: '#FAF7F3',
+          backgroundColor: '#060608',
           opacity: menuOpen ? 1 : 0,
           pointerEvents: menuOpen ? 'auto' : 'none',
           transform: menuOpen ? 'scale(1)' : 'scale(0.97)',
@@ -137,7 +139,7 @@ export default function Navbar() {
                 opacity: menuOpen ? 1 : 0,
                 transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
                 transition: `all 0.4s cubic-bezier(0.16, 1, 0.3, 1) ${0.1 + i * 0.08}s`,
-                color: currentPath === link.href ? '#C45D3E' : '#111111',
+                color: currentPath === link.href ? '#C45D3E' : '#FFFFFF',
               }}
               onClick={() => setMenuOpen(false)}
             >
@@ -149,8 +151,8 @@ export default function Navbar() {
             className="text-[13px] font-medium tracking-[0.06em] uppercase px-8 py-3 rounded-full mt-4"
             style={{
               fontFamily: 'Inter, sans-serif',
-              backgroundColor: '#111111',
-              color: '#FAF7F3',
+              backgroundColor: '#FFFFFF',
+              color: '#060608',
               opacity: menuOpen ? 1 : 0,
               transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
               transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s',

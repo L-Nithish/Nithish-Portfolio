@@ -65,7 +65,7 @@ export default function ProjectList({ showAll = false }) {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
       {displayProjects.map((project, index) => (
         <ScrollReveal key={project.num} delay={index * 0.1}>
-          <div className="group relative bg-[#FAF7F3] border border-charcoal/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-terracotta/20 hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col h-full">
+          <div className="group relative bg-cream-dark border border-charcoal/10 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-terracotta/20 hover:-translate-y-2 transition-all duration-500 ease-out flex flex-col h-full">
             
             {/* Card Image Area with Floating Zoom */}
             <div className="aspect-[16/10] overflow-hidden bg-cream-dark relative border-b border-charcoal/5">

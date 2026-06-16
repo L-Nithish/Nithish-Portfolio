@@ -5,25 +5,25 @@
   --font-body: "Inter", sans-serif;
   --font-serif: "Playfair Display", serif;
   
-  /* Warm Cream Palette */
-  --color-cream: #FAF7F3;
-  --color-cream-dark: #F0EDE8;
-  --color-cream-darker: #E5E1DB;
+  /* Deep Space Black Palette */
+  --color-cream: #060608;
+  --color-cream-dark: #0F0F14;
+  --color-cream-darker: #15151B;
   
-  /* Charcoal Text */
-  --color-charcoal: #111111;
-  --color-charcoal-light: #333333;
-  --color-charcoal-muted: #888888;
+  /* White & Silver Text */
+  --color-charcoal: #FFFFFF;
+  --color-charcoal-light: #CBCAD1;
+  --color-charcoal-muted: #7E7D8A;
   
-  /* Warm Accent */
-  --color-terracotta: #C45D3E;
-  --color-terracotta-light: #E8795A;
+  /* Vibrant Terracotta Accent */
+  --color-terracotta: #E36A47;
+  --color-terracotta-light: #F78E72;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: var(--color-cream);
+    background: linear-gradient(to bottom, #060608 0%, #0A0A0E 40%, #0F0F14 100%);
     color: var(--color-charcoal);
   }
   
@@ -32,7 +32,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-    background-color: var(--color-cream);
+    background-color: transparent;
     font-size: 15px;
     line-height: 1.7;
   }
@@ -51,7 +51,7 @@
 
   /* Thin editorial dividers */
   .divider {
-    border-top: 1px solid rgba(17, 17, 17, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* Subtle hover card background */
@@ -71,8 +71,8 @@
     letter-spacing: 0.04em;
     padding: 5px 12px;
     border-radius: 100px;
-    border: 1px solid rgba(17, 17, 17, 0.1);
-    color: #555;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--color-charcoal-light);
     background: transparent;
     transition: all 0.3s ease;
     display: inline-block;
@@ -138,111 +138,17 @@
   .bob-3 { animation: bob3 3.5s ease-in-out infinite; }
   .bob-4 { animation: bob4 5.2s ease-in-out infinite; }
 
-  /* Premium Ambient Background - stretches to full scrollable document height */
-  .ambient-bg {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    overflow: hidden;
-    background-color: var(--color-cream);
-  }
-
-  /* Fixed editorial grid overlay - remains pinned to viewport on scroll */
+  /* Premium Background Grid - stays fixed in viewport, low contrast lines */
   .ambient-grid {
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
     background-size: 80px 80px;
     background-image: 
-      linear-gradient(to right, rgba(17, 17, 17, 0.015) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(17, 17, 17, 0.015) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
     mask-image: radial-gradient(circle at center, black 30%, transparent 95%);
     -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 95%);
-  }
-
-  /* Glowing mesh gradient blobs - absolute positioned to distribute down the page */
-  .ambient-blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(150px);
-    opacity: 0.14;
-    will-change: transform;
-  }
-
-  /* Blob 1: Top Left (Hero / Landing Section) */
-  .blob-1 {
-    top: 5%;
-    left: -10%;
-    width: 55vw;
-    height: 55vw;
-    background-color: var(--color-terracotta);
-    animation: float-blob-1 25s ease-in-out infinite alternate;
-  }
-
-  /* Blob 2: Middle Right (Featured Projects Section) */
-  .blob-2 {
-    top: 25%;
-    right: -10%;
-    width: 60vw;
-    height: 60vw;
-    background-color: #E2B65C; /* Warm gold */
-    animation: float-blob-2 30s ease-in-out infinite alternate;
-  }
-
-  /* Blob 3: Center Left (Offerings / Services Section) */
-  .blob-3 {
-    top: 50%;
-    left: -15%;
-    width: 50vw;
-    height: 50vw;
-    background-color: var(--color-terracotta-light);
-    animation: float-blob-3 22s ease-in-out infinite alternate;
-  }
-
-  /* Blob 4: Lower Right (Experience / Career Timeline) */
-  .blob-4 {
-    top: 70%;
-    right: -5%;
-    width: 55vw;
-    height: 55vw;
-    background-color: #E2B65C; /* Warm gold */
-    animation: float-blob-4 28s ease-in-out infinite alternate;
-  }
-
-  /* Blob 5: Bottom Left (Contact Form Section) */
-  .blob-5 {
-    top: 88%;
-    left: -10%;
-    width: 50vw;
-    height: 50vw;
-    background-color: var(--color-terracotta);
-    animation: float-blob-5 20s ease-in-out infinite alternate;
-  }
-
-  @keyframes float-blob-1 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(100px, 60px) scale(1.1); }
-  }
-
-  @keyframes float-blob-2 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-120px, -70px) scale(1.05); }
-  }
-
-  @keyframes float-blob-3 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(80px, 90px) scale(1.12); }
-  }
-
-  @keyframes float-blob-4 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(-90px, 80px) scale(1.08); }
-  }
-
-  @keyframes float-blob-5 {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(70px, -60px) scale(1.15); }
   }
 }
