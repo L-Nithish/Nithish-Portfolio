@@ -23,21 +23,6 @@ const HEADLINERS = [
   },
   {
     id: "02",
-    title: "Cosmic IQ",
-    type: "Enterprise Capability SaaS",
-    tagline: "Enterprise workforce capability analytics, mapping skills gaps dynamically in real-time.",
-    context: "Enterprise organizations struggle to map and analyze the true technical capabilities of their workforce.",
-    problem: "Needed a secure, multi-tenant platform that could visualize complex capability gaps while strictly preventing XSS and CSRF vulnerabilities.",
-    solution: "Architected a Java Spring Boot backend utilizing stateless JWT authentication with silent HTTP-Only cookie rotation, paired with a dynamic React frontend.",
-    outcome: "Delivered a robust SaaS platform featuring role-based dashboards and real-time SVG skills-gap heatmaps via Recharts.",
-    architecture: "A deeply decoupled microservice architecture. The Spring Boot API serves as a strict REST interface, connecting the React client to PostgreSQL via Spring Data JPA.",
-    features: ["Role-Based Access Control Dashboards", "Real-Time SVG Heatmap Generation", "Silent HTTP-Only JWT Token Rotation"],
-    tech: ["Java", "Spring Boot", "JWT", "React", "PostgreSQL", "Docker"],
-    links: { live: "https://cosmic-iq-98j7.vercel.app", source: "https://github.com/l-nithish/cosmic-iq" },
-    technicalDecisions: "Decided against a standard monolith to strictly enforce single-responsibility. Chose JWTs stored in HTTP-Only cookies to completely neutralize XSS vectors without sacrificing stateless scalability."
-  },
-  {
-    id: "03",
     title: "Succession AI",
     type: "Real-Time AI Ecosystem",
     tagline: "An event-driven developer sandbox and real-time AI mock interview coaching workspace.",
@@ -52,7 +37,7 @@ const HEADLINERS = [
     technicalDecisions: "Traditional HTTP polling is too slow for conversational AI. Implemented STOMP over WebSockets to maintain persistent full-duplex channels, dropping latency down to sub-100ms for coding sandbox execution."
   },
   {
-    id: "04",
+    id: "03",
     title: "DexterStore",
     type: "Digital Marketplace",
     tagline: "A secure, decoupled e-commerce storefront for selling web templates and code assets.",
@@ -67,7 +52,7 @@ const HEADLINERS = [
     technicalDecisions: "Cart state persistence and transactional integrity were paramount. Chose Hibernate for strict ACID compliance on the backend, while leaving the React storefront completely stateless and deeply cacheable."
   },
   {
-    id: "05",
+    id: "04",
     title: "Cricket Evolution",
     type: "Interactive Editorial Portal",
     tagline: "An immersive digital history portal exploring five centuries of cricket laws and milestones.",
@@ -191,9 +176,8 @@ function ProjectCaseStudy({ project }: { project: any }) {
                 <Lock className="w-2.5 h-2.5 text-neutral-600 mr-1.5 shrink-0" />
                 <span className="text-[11px] font-mono text-neutral-500 tracking-wide select-all overflow-hidden text-ellipsis whitespace-nowrap">
                   {project.id === "01" ? "workspace.quantumos.dev" :
-                   project.id === "02" ? "cosmic-iq.nithish.dev" :
-                   project.id === "03" ? "succession-ai.nithish.dev" :
-                   project.id === "04" ? "store.nithish.dev" :
+                   project.id === "02" ? "succession-ai.nithish.dev" :
+                   project.id === "03" ? "store.nithish.dev" :
                    "cricket.nithish.dev"}
                 </span>
               </div>
@@ -213,9 +197,8 @@ function ProjectCaseStudy({ project }: { project: any }) {
               style={{ y }}
               src={
                 project.id === "01" ? "/images/quantumos.png" :
-                project.id === "02" ? "/images/cosmic_iq.png" :
-                project.id === "03" ? "/images/succession_ai.png" :
-                project.id === "04" ? "/images/dexterstore.png" :
+                project.id === "02" ? "/images/succession_ai.png" :
+                project.id === "03" ? "/images/dexterstore.png" :
                 "/images/cricket_evolution.png"
               } 
               alt={`${project.title} Software Interface Mockup`}
@@ -283,10 +266,9 @@ function ProjectCaseStudy({ project }: { project: any }) {
           {/* Animated SVG Blueprint */}
           <div className="w-full aspect-[16/9] rounded-[2rem] border border-neutral-900 bg-neutral-950/40 flex items-center justify-center overflow-hidden py-8 px-4 select-none">
             {project.id === "01" && <QuantumOSDiagram />}
-            {project.id === "02" && <CosmicIQDiagram />}
-            {project.id === "03" && <SuccessionAIDiagram />}
-            {project.id === "04" && <DexterStoreDiagram />}
-            {project.id === "05" && <CricketEvolutionDiagram />}
+            {project.id === "02" && <SuccessionAIDiagram />}
+            {project.id === "03" && <DexterStoreDiagram />}
+            {project.id === "04" && <CricketEvolutionDiagram />}
           </div>
           
           {/* Decisions & Key Features */}
@@ -388,46 +370,6 @@ function QuantumOSDiagram() {
           <path d="M 685 85 C 685 90, 745 90, 745 85" stroke="#52525b" strokeWidth="1.5" />
           <path d="M 685 102 C 685 107, 745 107, 745 102" stroke="#52525b" strokeWidth="1.5" />
           <text x="715" y="148" textAnchor="middle" fill="#a1a1aa" fontSize="9" fontFamily="monospace">Neon.tech DB</text>
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function CosmicIQDiagram() {
-  return (
-    <div className="w-full h-full flex flex-col justify-between py-4">
-      <style>{DIAGRAM_STYLE}</style>
-      <div className="w-full text-center mb-4">
-        <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-neutral-500">Stateless JWT Rotation Pipeline</span>
-      </div>
-      <div className="flex-grow w-full relative">
-        <svg className="w-full h-full min-h-[220px]" viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 160 110 L 270 110" stroke="#262626" strokeWidth="1.5" />
-          <path d="M 160 110 L 270 110" stroke="#a3a3a3" strokeWidth="1.5" className="diag-line-pulse" />
-          <path d="M 370 110 L 480 110" stroke="#262626" strokeWidth="1.5" />
-          <path d="M 370 110 L 480 110" stroke="#a3a3a3" strokeWidth="1.5" className="diag-line-pulse" />
-          <path d="M 580 110 L 670 110" stroke="#262626" strokeWidth="1.5" />
-          <path d="M 580 110 L 670 110" stroke="#a3a3a3" strokeWidth="1.5" className="diag-line-pulse" />
-          <rect x="40" y="60" width="120" height="100" rx="16" fill="#09090b" stroke="#27272a" strokeWidth="1.5" />
-          <rect x="52" y="76" width="96" height="40" rx="8" fill="#18181b" stroke="#3f3f46" strokeWidth="1" />
-          <text x="100" y="100" textAnchor="middle" fill="#a1a1aa" fontSize="10" fontFamily="monospace">Browser UI</text>
-          <text x="100" y="138" textAnchor="middle" fill="#fff" fontSize="11" fontFamily="monospace">React Client</text>
-          <rect x="270" y="60" width="100" height="100" rx="16" fill="#09090b" stroke="#27272a" strokeWidth="1.5" className="diag-glow" />
-          <polygon points="320,72 345,82 345,112 320,132 295,112 295,82" stroke="#e5e5e5" strokeWidth="1.5" fill="#18181b" />
-          <text x="320" y="148" textAnchor="middle" fill="#a1a1aa" fontSize="10" fontFamily="monospace">Spring Security</text>
-          <text x="320" y="105" textAnchor="middle" fill="#fff" fontSize="8" fontFamily="monospace" fontWeight="bold">JWT</text>
-          <rect x="480" y="60" width="100" height="100" rx="16" fill="#09090b" stroke="#27272a" strokeWidth="1.5" />
-          <rect x="495" y="75" width="70" height="8" rx="2" fill="#27272a" />
-          <rect x="495" y="90" width="70" height="8" rx="2" fill="#27272a" />
-          <rect x="495" y="105" width="70" height="8" rx="2" fill="#a1a1aa" />
-          <text x="530" y="148" textAnchor="middle" fill="#fff" fontSize="10" fontFamily="monospace">Spring Boot</text>
-          <rect x="670" y="60" width="90" height="100" rx="16" fill="#09090b" stroke="#27272a" strokeWidth="1.5" />
-          <path d="M 685 85 C 685 80, 745 80, 745 85 L 745 135 C 745 140, 685 140, 685 135 Z" fill="#18181b" stroke="#52525b" strokeWidth="1.5" />
-          <path d="M 685 85 C 685 90, 745 90, 745 85" stroke="#52525b" strokeWidth="1.5" />
-          <path d="M 685 102 C 685 107, 745 107, 745 102" stroke="#52525b" strokeWidth="1.5" />
-          <path d="M 685 119 C 685 124, 745 124, 745 119" stroke="#52525b" strokeWidth="1.5" />
-          <text x="715" y="148" textAnchor="middle" fill="#a1a1aa" fontSize="10" fontFamily="monospace">PostgreSQL</text>
         </svg>
       </div>
     </div>

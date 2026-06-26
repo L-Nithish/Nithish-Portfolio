@@ -36,13 +36,6 @@ Results-driven **Java Full-Stack Developer** with a strong academic background i
 
 ## FEATURED SOFTWARE PROJECTS
 
-### **Cosmic IQ — Enterprise Workforce Intelligence SaaS**
-*Java, Spring Boot, Spring Security, JWT, React, Recharts, Docker, PostgreSQL* | [Live Site](https://cosmic-iq-98j7.vercel.app)
-* Developed an enterprise-grade SaaS capability mapping platform featuring role-based dashboards for Employees, Managers, and Administrators.
-* Implemented stateless **JWT authentication** with silent token rotation and secure HTTP-Only cookie storage to prevent XSS/CSRF attacks.
-* Designed a dynamic **skills gap heatmap** comparing actual vs. target competencies using **Recharts** for real-time SVG analytics visualization.
-* Built a secure backend using Spring Data JPA and PostgreSQL with UUID primary keys and logical soft-deletes.
-
 ### **Succession AI — Mock Interview Coaching Ecosystem**
 *Next.js 14, Spring Boot, Spring Security, WebSockets (STOMP), OpenAI API, PostgreSQL* | [Live Site](https://succession-ai-s4hp.vercel.app)
 * Engineered a real-time AI-powered interview coaching application.
