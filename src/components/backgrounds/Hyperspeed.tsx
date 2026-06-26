@@ -1051,13 +1051,9 @@ class App {
 
     const smaaPass = new EffectPass(
       this.camera,
-      new SMAAEffect(
-        this.assets.smaa.search,
-        this.assets.smaa.area,
-        {
-          preset: SMAAPreset.MEDIUM
-        } as any
-      )
+      new SMAAEffect({
+        preset: SMAAPreset.MEDIUM
+      })
     );
     this.renderPass.renderToScreen = false;
     this.bloomPass.renderToScreen = false;
@@ -1096,6 +1092,7 @@ class App {
   }
 
   init() {
+    if (this.disposed) return;
     this.initPasses();
     const options = this.options;
     this.road.init();

@@ -63,7 +63,7 @@ const HEADLINERS = [
     architecture: "Component-driven view mapping built on Next.js client-side rendering with animated page enter transitions.",
     features: ["Multi-View Slide Drawer Navigation", "DRS Rulebook Interactive Guides", "Hall of Fame Legends Directory"],
     tech: ["Next.js 16", "React 19", "Tailwind CSS v4", "JavaScript", "Framer Motion"],
-    links: { live: "https://cricket-evolution-alpha.vercel.app", source: "https://github.com/l-nithish/cricket-evolution" },
+    links: { live: "https://cricket-evolution-l-nithish.vercel.app", source: "https://github.com/l-nithish/cricket-evolution" },
     technicalDecisions: "Utilized Next.js client component state routing to create a single-page app feel with instant view-switching, loading sub-sections dynamically without full-page reloads."
   }
 ];
