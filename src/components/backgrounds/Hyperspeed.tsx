@@ -1051,9 +1051,13 @@ class App {
 
     const smaaPass = new EffectPass(
       this.camera,
-      new SMAAEffect({
-        preset: SMAAPreset.MEDIUM
-      })
+      new SMAAEffect(
+        this.assets.smaa.search,
+        this.assets.smaa.area,
+        {
+          preset: SMAAPreset.MEDIUM
+        } as any
+      )
     );
     this.renderPass.renderToScreen = false;
     this.bloomPass.renderToScreen = false;

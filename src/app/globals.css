@@ -27,3 +27,21 @@ body {
   background: rgba(255, 255, 255, 0.99);
   color: #000;
 }
+
+/* Lenis smooth scrolling compatibility overrides */
+html.lenis, html.lenis-scrolling {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
