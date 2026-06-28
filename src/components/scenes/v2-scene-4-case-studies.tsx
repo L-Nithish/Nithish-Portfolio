@@ -18,7 +18,7 @@ const HEADLINERS = [
     architecture: "Enterprise-grade Spring Boot backend exposing security APIs and custom AI command endpoints, connected to a highly responsive React/Vite frontend with dynamic local storage cache and spring transactions.",
     features: ["Natural Language DB Mutation Agent", "Personalized Lock Screen & Desktop VFS", "ACID-compliant Live Project/Task Boards"],
     tech: ["Java", "Spring Boot", "React", "Vite", "Neon.tech", "PostgreSQL", "Framer Motion", "Tailwind CSS"],
-    links: { live: "https://quantum-os-lyart.vercel.app", source: "https://github.com/L-Nithish/QuantumOS" },
+    links: { live: "https://quantum-os-bzoj.vercel.app", source: "https://github.com/L-Nithish/QuantumOS" },
     technicalDecisions: "Pioneered a rule-based AI processing layer directly within backend services to bypass expensive, high-latency LLM polling for routine workspace mutations, driving response times to sub-50ms."
   },
   {
