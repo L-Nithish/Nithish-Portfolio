@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L. Nithish Kumar - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      background-color: #ffffff;
+      line-height: 1.5;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 13px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #000000;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .header .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+    .header .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+      color: #4b5563;
+    }
+    .header .contact span {
+      display: flex;
+      align-items: center;
+    }
+    .header .contact span:not(:last-child)::after {
+      content: "|";
+      margin-left: 12px;
+      color: #d1d5db;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #000000;
+      border-bottom: 1.5px solid #111111;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+    .summary-text {
+      font-size: 12.5px;
+      color: #374151;
+      text-align: justify;
+    }
+
+    /* Skills Grid */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 20px;
+    }
+    .skill-category {
+      font-size: 12px;
+      color: #374151;
+    }
+    .skill-category strong {
+      color: #000000;
+    }
+
+    /* Project Styles */
+    .project {
+      margin-bottom: 15px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .project-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .project-tech {
+      font-size: 11px;
+      font-weight: 500;
+      color: #4b5563;
+      font-style: italic;
+    }
+    .project-links {
+      font-size: 11px;
+      margin-bottom: 5px;
+    }
+    .project-links a {
+      margin-right: 10px;
+      font-weight: 500;
+    }
+    .project-bullets {
+      list-style-type: disc;
+      margin-left: 18px;
+      color: #374151;
+    }
+    .project-bullets li {
+      margin-bottom: 3px;
+      font-size: 12px;
+      text-align: justify;
+    }
+
+    /* Education & Training Styles */
+    .edu-item {
+      margin-bottom: 12px;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .edu-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #000000;
+    }
+    .edu-inst {
+      font-size: 12px;
+      font-style: italic;
+      color: #4b5563;
+    }
+    .edu-date {
+      font-size: 11px;
+      font-weight: 500;
+      color: #4b5563;
+    }
+    .edu-bullets {
+      list-style-type: circle;
+      margin-left: 18px;
+      color: #374151;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    /* Page Break for Print */
+    .page-break {
+      break-before: page;
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        padding: 20px 30px;
+        font-size: 12px;
+      }
+      .header h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+      .project {
+        margin-bottom: 12px;
+      }
+      .project-bullets li {
+        font-size: 11.5px;
+      }
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
+      /* Hide URL print annotations */
+      a[href]::after {
+        content: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>L. Nithish Kumar</h1>
+    <div class="title">Java Full-Stack Developer</div>
+    <div class="contact">
+      <span>📍 Chennai, Tamil Nadu, India</span>
+      <span>📞 +91 8015855656</span>
+      <span>✉️ <a href="mailto:agentnithish233@gmail.com">agentnithish233@gmail.com</a></span>
+      <span>🌐 <a href="https://nithish-portfolio-theta.vercel.app" target="_blank">Portfolio</a></span>
+      <span>💻 <a href="https://github.com/l-nithish" target="_blank">GitHub</a></span>
+      <span>👔 <a href="https://linkedin.com/in/nithish-kumar-l-85927a398" target="_blank">LinkedIn</a></span>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p class="summary-text">
+      Results-driven <strong>Java Full-Stack Developer</strong> with a solid foundation in Information Technology and intensive technical training in modern software engineering. Proven capability in designing, building, and deploying scalable, secure, and low-latency web applications using <strong>Java, Spring Boot, React, Next.js,</strong> and <strong>PostgreSQL</strong>. Highly skilled in event-driven systems (WebSockets), database optimization, RESTful API design, and containerization. Passionate about clean code, robust backend architectures, and high-fidelity interactive user interfaces.
+    </p>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <strong>Backend:</strong> Java, Spring Boot, Spring Security, Spring Data JPA, Hibernate, RESTful APIs, WebSockets (STOMP/SockJS), JWT Authentication, Microservices.
+      </div>
+      <div class="skill-category">
+        <strong>Frontend:</strong> JavaScript (ES6+), TypeScript, React (v19), Next.js (v16), Tailwind CSS (v4), Framer Motion, HTML5, CSS3.
+      </div>
+      <div class="skill-category">
+        <strong>Databases:</strong> SQL, PostgreSQL, Neon.tech, MySQL, Database Normalization, Indexing, Transaction Management.
+      </div>
+      <div class="skill-category">
+        <strong>DevOps & Tools:</strong> Git, GitHub, Docker, Vercel, Netlify, Render, GitHub Pages, IntelliJ IDEA, VS Code.
+      </div>
+      <div class="skill-category" style="grid-column: span 2; margin-top: 4px; border-top: 1px dashed #e5e7eb; padding-top: 6px;">
+        <strong>AI & Automation:</strong> OpenAI API, Natural Language Processing (NLP) Command Parsers, LLM Integration, Prompt Engineering, n8n Automation, AI Agent Pipelines.
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section>
+    <h2>Featured Software Projects</h2>
+
+    <!-- PROJECT 1: QUANTUMOS -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">QuantumOS — Spatial SaaS & AI-Powered Workspace</span>
+        <span class="project-tech">React, Spring Boot, Spring Security, JPA, PostgreSQL, Docker</span>
+      </div>
+      <div class="project-links">
+        <a href="https://quantum-os-bzoj.vercel.app" target="_blank">Live Demo</a> | 
+        <a href="https://github.com/L-Nithish/QuantumOS" target="_blank">GitHub Code</a> |
+        <a href="https://github.com/L-Nithish/L-Nithish/blob/main/case-studies/quantum-os.md" target="_blank">Case Study</a>
+      </div>
+      <ul class="project-bullets">
+        <li><strong>Spatial OS UI:</strong> Engineered a high-performance in-browser spatial desktop environment featuring a custom Virtual File System (VFS) and resizable, draggable window managers.</li>
+        <li><strong>Sub-50ms AI Mutations:</strong> Developed a custom, rule-based Natural Language Processing (NLP) parser in the Spring Boot service layer to parse chat prompts and mutate database records, bypassing expensive LLM calls and reducing transaction latency to <strong>under 50ms</strong>.</li>
+        <li><strong>Stateless Security:</strong> Implemented secure user authentication using Spring Security and stateless <strong>JWT tokens</strong>, protecting private API routes and maintaining session integrity.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 2: SUCCESSION AI -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Succession AI — Real-Time WebSocket Interview Sandbox</span>
+        <span class="project-tech">Next.js, Spring Boot, WebSockets (STOMP), OpenAI API, PostgreSQL</span>
+      </div>
+      <div class="project-links">
+        <a href="https://succession-ai-s4hp.vercel.app" target="_blank">Live Demo</a> | 
+        <a href="https://github.com/L-Nithish/Succession-AI" target="_blank">GitHub Code</a> |
+        <a href="https://github.com/L-Nithish/L-Nithish/blob/main/case-studies/succession-ai.md" target="_blank">Case Study</a>
+      </div>
+      <ul class="project-bullets">
+        <li><strong>Low-Latency WebSockets:</strong> Engineered a full-duplex communication layer using <strong>STOMP over WebSockets (SockJS)</strong> to handle real-time chat and coding sandbox events, dropping latency to <strong>under 10ms</strong>.</li>
+        <li><strong>Dynamic AI Prompts:</strong> Integrated <strong>OpenAI Chat Completion API</strong> with structured JSON output to parse candidate resumes, extract core competencies, and dynamically generate tailored technical questions in real-time.</li>
+        <li><strong>Interactive Sandbox:</strong> Built an in-browser coding sandbox featuring instant syntax validation, code execution pipelines, and recruiter analytics dashboards.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PAGE BREAK HERE FOR PERFECT 2-PAGE PRINT LAYOUT -->
+  <section class="page-break">
+    <h2>Featured Software Projects (Continued)</h2>
+
+    <!-- PROJECT 3: DEXTERSTORE -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">DexterStore — Decoupled E-Commerce Marketplace</span>
+        <span class="project-tech">React, Spring Boot, Hibernate, REST APIs, PostgreSQL, Tailwind CSS</span>
+      </div>
+      <div class="project-links">
+        <a href="https://dexterstore.netlify.app" target="_blank">Live Demo</a> | 
+        <a href="https://github.com/L-Nithish/DexterStore" target="_blank">GitHub Code</a> |
+        <a href="https://github.com/L-Nithish/L-Nithish/blob/main/case-studies/dexter-store.md" target="_blank">Case Study</a>
+      </div>
+      <ul class="project-bullets">
+        <li><strong>Decoupled Architecture:</strong> Designed a deeply decoupled system separating a highly cacheable React storefront from a transactional Spring Boot backend.</li>
+        <li><strong>ACID Transactions:</strong> Managed database transactions using <strong>Hibernate ORM</strong> to ensure transactional cart persistence, preventing session data loss and guaranteeing inventory integrity.</li>
+        <li><strong>Role-Based Security:</strong> Implemented role-based access control (RBAC) using Spring Security to secure administrative panels for catalog management.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 4: CRICKET EVOLUTION -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Cricket Evolution — Immersive Editorial Portal</span>
+        <span class="project-tech">Next.js 16, React 19, Tailwind CSS v4, Framer Motion, JavaScript</span>
+      </div>
+      <div class="project-links">
+        <a href="https://cricket-evolution.vercel.app" target="_blank">Live Demo</a> | 
+        <a href="https://github.com/l-nithish/cricket-evolution" target="_blank">GitHub Code</a> |
+        <a href="https://github.com/L-Nithish/L-Nithish/blob/main/case-studies/cricket-evolution.md" target="_blank">Case Study</a>
+      </div>
+      <ul class="project-bullets">
+        <li><strong>Instant Transitions:</strong> Developed a Next.js portal utilizing client-side view mapping, reducing page transition latency to <strong>0ms</strong> and eliminating server-side reloads.</li>
+        <li><strong>Fluid Animations:</strong> Designed an interactive DRS rulebook simulator and Hall of Fame legend cards using <strong>Framer Motion</strong> and GPU-accelerated CSS transforms.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT 5: MOVIE EXPLORER -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-title">Movie Explorer — Lightweight Async API Engine</span>
+        <span class="project-tech">Vanilla JS (ES6), REST APIs, CSS3, HTML5</span>
+      </div>
+      <div class="project-links">
+        <a href="https://l-nithish.github.io/movie-search-app/" target="_blank">Live Demo</a> | 
+        <a href="https://github.com/L-Nithish/movie-search-app" target="_blank">GitHub Code</a> |
+        <a href="https://github.com/L-Nithish/L-Nithish/blob/main/case-studies/movie-explorer.md" target="_blank">Case Study</a>
+      </div>
+      <ul class="project-bullets">
+        <li><strong>Async Fetch Pipeline:</strong> Built an asynchronous fetching engine using vanilla JS (`async/await`) to query the OMDb API, enabling background loading and maintaining a responsive UI.</li>
+        <li><strong>DOM Optimization:</strong> Optimized DOM rendering to batch grid reflows, ensuring search results render in under <strong>5ms</strong>.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section>
+    <h2>Education & Professional Training</h2>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">Java Full-Stack Development Certification</span>
+        <span class="edu-date">Jan 2025 — Present (Expected 2026)</span>
+      </div>
+      <div class="edu-inst">Qspiders — Chennai, India</div>
+      <ul class="edu-bullets">
+        <li>Undergoing 500+ hours of professional training in Core Java, Advanced Database Design, Spring Boot APIs, and React client-side architectures.</li>
+      </ul>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">Bachelor of Science in Information Technology (B.Sc. IT)</span>
+        <span class="edu-date">2022 — 2025</span>
+      </div>
+      <div class="edu-inst">SRNY College of Arts and Science — Tenkasi, India</div>
+      <ul class="edu-bullets">
+        <li>Focused on computer networking, database management systems (DBMS), Object-Oriented Programming (OOP), and software engineering principles.</li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>
