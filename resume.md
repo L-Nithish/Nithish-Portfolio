@@ -2,7 +2,7 @@
 
 **Java Full-Stack Developer**  
 📍 Chennai, India | 📞 +91 8015855656 | ✉️ agentnithish233@gmail.com  
-🌐 [Portfolio Website](https://nithish-portfolio-amber.vercel.app) | 💻 [GitHub](https://github.com/l-nithish) | 👔 [LinkedIn](https://linkedin.com)
+🌐 [Portfolio Website](https://nithish-portfolio-theta.vercel.app) | 💻 [GitHub](https://github.com/l-nithish) | 👔 [LinkedIn](https://linkedin.com/in/nithish-kumar-l-85927a398)
 
 ---
 
