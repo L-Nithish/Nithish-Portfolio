@@ -1,3 +1,4 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@300;400;500;600;700&f[]=cabinet-grotesk@700;800;900&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -7,6 +8,8 @@
   --color-border: #222222;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-general: 'General Sans', sans-serif;
+  --font-cabinet: 'Cabinet Grotesk', sans-serif;
 }
 
 :root {
