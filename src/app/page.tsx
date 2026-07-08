@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/ui/navigation";
 import { PrologueScene } from "@/components/scenes/v2-scene-0-prologue";
+import { IdentityScene } from "@/components/scenes/v2-scene-1-identity";
 import { ManifestoScene } from "@/components/scenes/v2-scene-2-manifesto";
 import { CapabilitiesScene } from "@/components/scenes/v2-scene-3-capabilities";
 import { CaseStudiesScene } from "@/components/scenes/v2-scene-4-case-studies";
@@ -15,6 +16,10 @@ export default function Home() {
       
       <div id="prologue">
         <PrologueScene />
+      </div>
+
+      <div id="identity">
+        <IdentityScene />
       </div>
 
       <div id="manifesto">

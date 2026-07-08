@@ -95,12 +95,28 @@ const LogoBand: React.FC = () => {
       onUpdate: update,
     });
 
+    // Optimize: Pause the heavy 3D animation when not in viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tween.play();
+        } else {
+          tween.pause();
+        }
+      });
+    });
+
+    if (bandRef.current) {
+      observer.observe(bandRef.current);
+    }
+
     update();
     const handleResize = () => update();
     window.addEventListener('resize', handleResize);
 
     return () => {
       tween.kill();
+      observer.disconnect();
       window.removeEventListener('resize', handleResize);
     };
   }, [getResponsiveRadius, getLogoSize]);
