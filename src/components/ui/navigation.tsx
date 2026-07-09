@@ -9,7 +9,7 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show beautifully on the second section onwards (Identity page)
+      // Show on second page
       setScrolledPastHero(window.scrollY > window.innerHeight * 0.8);
       setShowTopBtn(window.scrollY > window.innerHeight);
     };
@@ -20,56 +20,55 @@ export function Navigation() {
 
   return (
     <>
-      {/* Jitter-Style Premium Floating Header */}
-      <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ease-out ${
+      {/* Ultra-Premium Floating Capsule Navbar */}
+      <div 
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           scrolledPastHero 
-            ? "opacity-100 translate-y-0 pointer-events-auto bg-[#050505]/70 backdrop-blur-xl border-b border-white/5 shadow-2xl pt-6 pb-4" 
-            : "opacity-0 -translate-y-12 pointer-events-none pt-8 pb-4"
+            ? "opacity-100 translate-y-0 pointer-events-auto scale-100" 
+            : "opacity-0 -translate-y-12 pointer-events-none scale-95"
         }`}
       >
-        <div className="max-w-[90rem] mx-auto px-6 md:px-12 flex justify-between items-center">
+        <div className="flex items-center gap-2 md:gap-4 p-2 bg-[#050505]/70 backdrop-blur-3xl border border-white/10 rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.6),inset_0_1px_0_0_rgba(255,255,255,0.1)]">
           
-          {/* Left: Logo (Text Removed as requested, only icon remains) */}
-          <a href="#" className="flex items-center group outline-none">
-            <div className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-black font-sans text-lg group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-              N
-            </div>
+          {/* Logo */}
+          <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-white to-neutral-400 text-black font-black font-sans text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(255,255,255,0.5)] ml-1">
+            N
           </a>
 
-          {/* Center: Premium Pill Navigation */}
-          <nav className="hidden md:flex items-center bg-white/[0.03] border border-white/[0.05] rounded-full p-1.5 backdrop-blur-md shadow-inner">
-            <a 
-              href="#manifesto" 
-              className="font-sans text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300 outline-none"
-            >
-              About
+          {/* Separator */}
+          <div className="w-[1px] h-5 bg-white/10 hidden md:block mx-1"></div>
+
+          {/* Links */}
+          <nav className="hidden md:flex items-center gap-1 px-1">
+            <a href="#manifesto" className="relative group px-4 py-2 rounded-full overflow-hidden outline-none">
+              <span className="relative z-10 font-sans text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">About</span>
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
             </a>
-            <a 
-              href="#capabilities" 
-              className="font-sans text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300 outline-none"
-            >
-              Skills
+            <a href="#capabilities" className="relative group px-4 py-2 rounded-full overflow-hidden outline-none">
+              <span className="relative z-10 font-sans text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">Skills</span>
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
             </a>
-            <a 
-              href="#case-studies" 
-              className="font-sans text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/10 px-6 py-2 rounded-full transition-all duration-300 outline-none"
-            >
-              Work
+            <a href="#case-studies" className="relative group px-4 py-2 rounded-full overflow-hidden outline-none">
+              <span className="relative z-10 font-sans text-sm font-medium text-neutral-400 group-hover:text-white transition-colors duration-300">Work</span>
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out rounded-full"></div>
             </a>
           </nav>
 
-          {/* Right: CTA Button */}
-          <div className="flex items-center gap-4">
-            <a 
-              href="#contact" 
-              className="font-sans text-sm font-bold text-black bg-white hover:bg-neutral-200 px-7 py-2.5 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] outline-none"
-            >
+          {/* Separator */}
+          <div className="w-[1px] h-5 bg-white/10 hidden md:block mx-1"></div>
+
+          {/* CTA Button */}
+          <a 
+            href="#contact" 
+            className="group relative overflow-hidden flex items-center justify-center px-6 py-2.5 bg-transparent border border-white/20 hover:border-white/50 rounded-full transition-all duration-300 mr-1"
+          >
+            <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            <span className="relative z-10 font-sans text-sm font-semibold text-white group-hover:text-black transition-colors duration-300">
               Contact
-            </a>
-          </div>
+            </span>
+          </a>
         </div>
-      </header>
+      </div>
 
       {/* Floating Back to Top Button */}
       <AnimatePresence>

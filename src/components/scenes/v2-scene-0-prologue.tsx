@@ -180,13 +180,10 @@ export function PrologueScene() {
         <div 
           className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none"
         >
-          <Image
+          <img
             src="/portrait.png"
             alt="Nithish — AI-Powered Java Full Stack Developer"
-            fill
-            priority
-            unoptimized
-            className="object-contain"
+            className="w-full h-full object-contain"
             style={{
               transform: 'scale(1.15) translateZ(0)',
               transformOrigin: 'center 22%',
