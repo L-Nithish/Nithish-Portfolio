@@ -76,11 +76,12 @@ const LogoBand: React.FC = () => {
         const opacity = 0.15 + depthNorm * 0.85; // Increased contrast for depth instead of blur
         const rotateY = (x / radius) * 35;
         const zIndex = Math.round(depthNorm * 20);
-        const computedSize = logoSize * scale;
+        
+        // Base size is 150, calculate the scale factor based on the responsive logoSize
+        const scaleAmount = (logoSize * scale) / 150;
 
-        el.style.transform = `translate3d(${x}px, 0px, 0px) rotateY(${rotateY}deg)`;
-        el.style.width = `${computedSize}px`;
-        el.style.height = `${computedSize}px`;
+        // Use scale() instead of mutating width/height to prevent massive layout recalculations (fixes lag)
+        el.style.transform = `translate3d(${x}px, 0px, 0px) scale(${scaleAmount}) rotateY(${rotateY}deg)`;
         el.style.opacity = `${opacity}`;
         el.style.zIndex = `${zIndex}`;
         el.style.filter = `saturate(1.4) brightness(1.15)`;

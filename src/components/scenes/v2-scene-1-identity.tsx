@@ -130,19 +130,24 @@ export function IdentityScene() {
          {/* Details Grid */}
          <div 
            ref={detailsRef}
-           className="absolute bottom-8 md:bottom-12 w-full px-6 md:px-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-0 z-20"
+           className="absolute bottom-4 md:bottom-8 w-full px-6 flex flex-col items-center justify-center z-20"
          >
-           <div className="flex flex-col gap-2">
-             <span className="text-white/40 tracking-[0.3em] text-[10px] md:text-xs uppercase font-mono">Location</span>
-             <div className="flex items-center gap-3 md:gap-4 mt-1">
-               <Globe className="w-5 h-5 md:w-10 md:h-10 text-neutral-300" />
-               <span className="text-lg md:text-4xl text-neutral-100 font-black tracking-tighter uppercase leading-none">Chennai, TamilNadu<br/>India</span>
+           <div className="flex flex-col items-center gap-2 md:gap-3 text-center">
+             <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+               <span className="text-white/50 tracking-[0.4em] text-[8px] md:text-[10px] uppercase font-mono font-bold">Designation</span>
              </div>
-           </div>
-           
-           <div className="md:text-right flex flex-col gap-2">
-             <span className="text-white/40 tracking-[0.3em] text-[10px] md:text-xs uppercase font-mono">Designation</span>
-             <span className="text-lg md:text-4xl text-neutral-100 font-black tracking-tighter uppercase leading-[1.1] mt-1">AI-Powered Java<br/>Full Stack Developer</span>
+             
+             <div className="relative group cursor-default mt-1">
+               <span className="text-xl md:text-3xl lg:text-5xl font-black tracking-tighter uppercase leading-[0.95] block">
+                 <span className="text-transparent bg-clip-text bg-gradient-to-br from-neutral-200 to-neutral-600 block mb-1 hover:scale-105 transition-transform duration-500">
+                   AI-Powered Java
+                 </span>
+                 <span className="text-white/90 block hover:scale-105 transition-transform duration-500" style={{ textShadow: '0 0 40px rgba(255,255,255,0.3)' }}>
+                   Full Stack Developer
+                 </span>
+               </span>
+               <div className="absolute -inset-10 bg-gradient-to-r from-white/0 via-white/5 to-white/0 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700 pointer-events-none rounded-full" />
+             </div>
            </div>
          </div>
 
