@@ -1,6 +1,24 @@
 export const PROJECTS = [
   {
     id: "01",
+    slug: "subshield",
+    title: "SubShield",
+    type: "Local-First SaaS Expense Command Center",
+    tagline: "A privacy-first, zero-trust financial firewall that detects subscription leaks, category overlaps, and trial expirations.",
+    context: "SaaS bloat and silent auto-renewals cost teams thousands annually, while traditional finance tools require linking sensitive bank accounts.",
+    problem: "Needed a 100% client-side, zero-trust subscription intelligence platform featuring real-time financial math normalization, leak detection, and runway forecasting without cloud database latency or security risks.",
+    solution: "Architected a high-performance local-first platform featuring a Bento Command Matrix, dynamic Health Radar Gauge (0-100), interactive Runway Simulator, and a Vercel/Linear-inspired ⌘K Command Palette.",
+    outcome: "Built an ultra-minimalist titanium-obsidian SaaS cockpit with <1ms search latency, zero server cost, 100% data privacy, and 1-click cancellation assistance.",
+    architecture: "Client-side React 18 / Vite application utilizing local-first LocalStorage synchronization, Framer Motion spring physics, and an automated Clearbit brand logo resolution engine.",
+    features: ["Bento Command Matrix & Health Score Gauge", "Runway Optimization Simulator Slider", "⌘K Command Palette & 1-Click Cancel Assistant"],
+    tech: ["React 18", "Vite", "Tailwind CSS", "Framer Motion", "TypeScript", "LocalStorage"],
+    links: { live: "http://localhost:5173", source: "https://github.com/l-nithish/subshield" },
+    technicalDecisions: "Engineered a local mathematical normalization engine that standardizes multi-frequency billing cycles into exact monthly/annual burn rates with zero server polling latency.",
+    image: "/images/subshield.png",
+    domain: "subshield.nithish.dev"
+  },
+  {
+    id: "02",
     slug: "quantumos",
     title: "QuantumOS",
     type: "AI-Powered Enterprise OS & SaaS",
@@ -18,7 +36,7 @@ export const PROJECTS = [
     domain: "workspace.quantumos.dev"
   },
   {
-    id: "02",
+    id: "03",
     slug: "succession-ai",
     title: "Succession AI",
     type: "Real-Time AI Ecosystem",
@@ -39,7 +57,7 @@ export const PROJECTS = [
 
 export const ARCHIVE = [
   {
-    id: "03",
+    id: "04",
     title: "Movie Explorer",
     desc: "A masterclass in lightweight, dependency-free JavaScript execution. Engineered a highly optimized async/await engine to query external OMDb APIs without blocking the main thread.",
     tech: ["Vanilla JS", "REST APIs", "CSS3"],
