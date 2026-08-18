@@ -2,219 +2,379 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Nithish Kumar Resume</title>
+<title>Nithish Kumar - Resume</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+  
   @page {
     size: A4;
-    margin: 12mm 15mm;
+    margin: 10mm 12mm;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #111827;
-    font-size: 9.8pt;
-    line-height: 1.38;
-    background: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1e293b;
+    background: #ffffff;
+    font-size: 9.2pt;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
   }
-  .container { width: 100%; max-width: 800px; margin: 0 auto; }
-  
+
+  .wrapper {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
   /* Header */
-  header { text-align: center; margin-bottom: 12px; }
-  h1 { font-size: 20pt; font-weight: 800; letter-spacing: 0.5px; color: #000; text-transform: uppercase; margin-bottom: 2px; }
-  .subtitle { font-size: 10pt; font-weight: 700; letter-spacing: 1px; color: #374151; text-transform: uppercase; margin-bottom: 6px; }
-  .contact { font-size: 8.8pt; color: #4b5563; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-  .contact a { color: #1d4ed8; text-decoration: none; font-weight: 500; }
-  
-  /* Section */
-  section { margin-bottom: 12px; }
+  header {
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+  .header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 8px;
+  }
+  .name {
+    font-size: 22pt;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .title-badge {
+    display: inline-block;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+  .contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 8.5pt;
+    color: #475569;
+    font-weight: 500;
+  }
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .contact-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Section Styles */
+  .section {
+    margin-bottom: 13px;
+  }
   .section-title {
+    font-size: 9.5pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #cbd5e1;
+  }
+
+  .summary-text {
+    font-size: 8.8pt;
+    color: #334155;
+    line-height: 1.45;
+    text-align: justify;
+  }
+
+  /* Technical Skills Box */
+  .skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .skill-group {
+    display: flex;
+    align-items: center;
+    font-size: 8.5pt;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 5px 10px;
+  }
+  .skill-cat {
+    font-weight: 700;
+    color: #0f172a;
+    width: 150px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-size: 7.8pt;
+    letter-spacing: 0.5px;
+  }
+  .skill-list {
+    color: #334155;
+    flex: 1;
+    font-weight: 500;
+  }
+
+  /* Projects Section */
+  .project-card {
+    margin-bottom: 10px;
+    background: #ffffff;
+    border-left: 2px solid #2563eb;
+    padding-left: 10px;
+  }
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+  .project-name {
     font-size: 10pt;
     font-weight: 800;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    color: #000;
-    border-bottom: 1.5px solid #111827;
-    padding-bottom: 2px;
-    margin-bottom: 6px;
+    color: #0f172a;
   }
-  
-  p.summary { font-size: 9.3pt; color: #1f2937; text-align: justify; }
+  .project-tech {
+    font-size: 7.8pt;
+    font-family: 'JetBrains Mono', monospace;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #dbeafe;
+  }
+  .project-links {
+    font-size: 8pt;
+    color: #64748b;
+    margin-bottom: 4px;
+    display: flex;
+    gap: 10px;
+  }
+  .project-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
-  /* Skills */
-  .skills-grid { font-size: 9pt; }
-  .skills-row { margin-bottom: 3px; display: flex; }
-  .skills-label { font-weight: 700; width: 135px; flex-shrink: 0; color: #111827; }
-  .skills-val { color: #374151; flex: 1; }
+  ul.bullets {
+    margin-left: 14px;
+  }
+  ul.bullets li {
+    font-size: 8.6pt;
+    color: #334155;
+    margin-bottom: 2px;
+    line-height: 1.38;
+    text-align: justify;
+  }
+  ul.bullets li strong {
+    color: #0f172a;
+    font-weight: 700;
+  }
 
-  /* Projects */
-  .project-item { margin-bottom: 8px; }
-  .project-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
-  .project-title { font-size: 10pt; font-weight: 700; color: #000; }
-  .project-tech { font-size: 8.5pt; font-style: italic; color: #4b5563; font-weight: 500; }
-  .project-links { font-size: 8pt; color: #1d4ed8; margin-bottom: 3px; }
-  .project-links a { color: #1d4ed8; text-decoration: none; margin-right: 8px; }
-  
-  ul { margin-left: 16px; margin-bottom: 2px; }
-  li { font-size: 9pt; color: #1f2937; margin-bottom: 2.5px; text-align: justify; }
-  li strong { color: #000; }
-
-  /* Education & Training */
-  .edu-item { margin-bottom: 6px; }
-  .edu-head { display: flex; justify-content: space-between; font-size: 9.5pt; font-weight: 700; color: #000; }
-  .edu-sub { font-size: 8.8pt; font-style: italic; color: #4b5563; margin-bottom: 2px; }
+  /* Education */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .edu-degree {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .edu-dates {
+    font-size: 8.2pt;
+    font-family: 'JetBrains Mono', monospace;
+    color: #64748b;
+  }
+  .edu-school {
+    font-size: 8.5pt;
+    color: #475569;
+    font-style: italic;
+    margin-bottom: 4px;
+  }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrapper">
 
   <!-- HEADER -->
   <header>
-    <h1>L. Nithish Kumar</h1>
-    <div class="subtitle">Java Full-Stack Developer</div>
-    <div class="contact">
-      <span>📍 Chennai, Tamil Nadu, India</span>
-      <span>📞 +91 8015855656</span>
-      <span>✉️ agentnithish233@gmail.com</span>
-      <span>🌐 <a href="https://nithish-portfolio-theta.vercel.app">Portfolio</a></span>
-      <span>💻 <a href="https://github.com/l-nithish">GitHub</a></span>
-      <span>👔 <a href="https://linkedin.com/in/nithish-kumar-l-85927a398">LinkedIn</a></span>
+    <div class="header-main">
+      <div>
+        <h1 class="name">L. Nithish Kumar</h1>
+        <div class="title-badge">Java Full-Stack Developer</div>
+      </div>
+      <div style="text-align: right;">
+        <div style="font-size: 8.5pt; color: #475569; font-weight: 600;">Chennai, Tamil Nadu, India</div>
+        <div style="font-size: 8.5pt; color: #475569; font-weight: 600;">+91 8015855656</div>
+      </div>
+    </div>
+    
+    <div class="contact-bar">
+      <div class="contact-item">✉️ agentnithish233@gmail.com</div>
+      <div class="contact-item">🌐 <a href="https://nithish-portfolio-theta.vercel.app" target="_blank">Portfolio Website</a></div>
+      <div class="contact-item">💻 <a href="https://github.com/l-nithish" target="_blank">GitHub Profile</a></div>
+      <div class="contact-item">👔 <a href="https://linkedin.com/in/nithish-kumar-l-85927a398" target="_blank">LinkedIn</a></div>
     </div>
   </header>
 
   <!-- SUMMARY -->
-  <section>
-    <div class="section-title">Professional Summary</div>
-    <p class="summary">
-      Results-driven <strong>Java Full-Stack Developer</strong> with expertise in modern software engineering, scalable web architectures, and client-side performance optimization. Proven capability in designing, building, and deploying high-throughput, low-latency applications using <strong>Java, Spring Boot, React, Next.js,</strong> and <strong>PostgreSQL</strong>. Highly proficient in event-driven systems (WebSockets), microservices, RESTful API engineering, local-first state persistence, and AI API integrations. Passionate about clean code, robust backend security, and crafting high-fidelity user interfaces.
+  <div class="section">
+    <div class="section-title">Executive Summary</div>
+    <p class="summary-text">
+      Results-driven <strong>Java Full-Stack Developer</strong> specialized in building high-throughput, low-latency web applications and local-first software architectures. Proven capability in engineering enterprise solutions using <strong>Java, Spring Boot, React (v19), Next.js (v16),</strong> and <strong>PostgreSQL</strong>. Proficient in event-driven systems (WebSockets), microservices, RESTful API design, local state persistence, and AI API integrations. Passionate about writing clean, maintainable code, robust backend security, and high-fidelity user interfaces.
     </p>
-  </section>
+  </div>
 
   <!-- TECHNICAL SKILLS -->
-  <section>
-    <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <div class="skills-row">
-        <span class="skills-label">Backend Engineering:</span>
-        <span class="skills-val">Java (Core & Advanced), Spring Boot, Spring Security, Spring Data JPA, Hibernate ORM, RESTful APIs, Microservices, WebSockets (STOMP/SockJS), JWT Authentication.</span>
+  <div class="section">
+    <div class="section-title">Technical Expertise</div>
+    <div class="skills-container">
+      <div class="skill-group">
+        <span class="skill-cat">Backend Engineering</span>
+        <span class="skill-list">Java (Core & Advanced), Spring Boot, Spring Security, Spring Data JPA, Hibernate ORM, RESTful APIs, Microservices, WebSockets (STOMP/SockJS), JWT Security.</span>
       </div>
-      <div class="skills-row">
-        <span class="skills-label">Frontend Development:</span>
-        <span class="skills-val">JavaScript (ES6+), TypeScript, React (v19), Next.js (v16), Tailwind CSS (v4), Framer Motion, HTML5, CSS3, State Management (Context API, Redux).</span>
+      <div class="skill-group">
+        <span class="skill-cat">Frontend Architecture</span>
+        <span class="skill-list">JavaScript (ES6+), TypeScript, React (v19), Next.js (v16), Tailwind CSS (v4), Framer Motion, HTML5, CSS3, State Management (Context API, Redux).</span>
       </div>
-      <div class="skills-row">
-        <span class="skills-label">Databases & Storage:</span>
-        <span class="skills-val">SQL, PostgreSQL, Neon.tech, MySQL, LocalStorage API, Database Normalization, Index Optimization, Transaction Management (ACID).</span>
+      <div class="skill-group">
+        <span class="skill-cat">Databases & Storage</span>
+        <span class="skill-list">SQL, PostgreSQL, Neon.tech, MySQL, LocalStorage API, Database Normalization, Index Optimization, ACID Transactions.</span>
       </div>
-      <div class="skills-row">
-        <span class="skills-label">DevOps & Tools:</span>
-        <span class="skills-val">Git, GitHub, Docker Containerization, Vercel, Netlify, Render, GitHub Pages, IntelliJ IDEA, VS Code, Postman, Vite.</span>
+      <div class="skill-group">
+        <span class="skill-cat">DevOps & Tooling</span>
+        <span class="skill-list">Git, GitHub, Docker Containerization, Vercel, Netlify, Render, GitHub Pages, IntelliJ IDEA, VS Code, Postman, Vite.</span>
       </div>
-      <div class="skills-row">
-        <span class="skills-label">AI & Automation:</span>
-        <span class="skills-val">OpenAI API Integration, Natural Language Processing (NLP) Command Parsers, Prompt Engineering, n8n Automation, AI Agent Pipelines.</span>
+      <div class="skill-group">
+        <span class="skill-cat">AI & Integration</span>
+        <span class="skill-list">OpenAI API Integration, Natural Language Processing (NLP) Parsers, Prompt Engineering, n8n Automation Workflows, AI Agent Pipelines.</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- FEATURED SOFTWARE PROJECTS -->
-  <section>
-    <div class="section-title">Featured Software Projects</div>
+  <!-- FEATURED PROJECTS -->
+  <div class="section">
+    <div class="section-title">Featured Software Engineering Projects</div>
 
-    <!-- Project 1: SubShield -->
-    <div class="project-item">
-      <div class="project-head">
-        <span class="project-title">SubShield — Local-First SaaS Expense Command Center</span>
-        <span class="project-tech">React 19, Tailwind CSS v4, Framer Motion, LocalStorage</span>
+    <!-- SubShield -->
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-name">SubShield — Local-First SaaS Expense Command Center</span>
+        <span class="project-tech">React 19 • Tailwind v4 • Framer Motion • LocalStorage</span>
       </div>
       <div class="project-links">
-        <a href="https://nithish-portfolio-theta.vercel.app/#case-studies">Live Demo</a> |
-        <a href="https://github.com/l-nithish/subshield">GitHub Code</a> |
-        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/subshield">Case Study</a>
+        <a href="https://subshield-app.vercel.app" target="_blank">Live App Demo</a> |
+        <a href="https://github.com/l-nithish/subshield" target="_blank">GitHub Code</a> |
+        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/subshield" target="_blank">Case Study</a>
       </div>
-      <ul>
+      <ul class="bullets">
         <li><strong>Zero-Trust Client Architecture:</strong> Architected a 100% local-first subscription defense platform using React 19 and browser <code>LocalStorage</code>, eliminating cloud telemetry and ensuring zero-latency data persistence with 100% privacy.</li>
         <li><strong>Interactive Bento Command Matrix:</strong> Engineered a Bento UI featuring an automated <strong>Portfolio Health Score algorithm (0-100)</strong>, an interactive <strong>Runway Optimization Simulator slider</strong> for real-time forecasting, and Framer Motion spring physics.</li>
         <li><strong>Sub-1ms Keyboard Command Palette:</strong> Built a Vercel-inspired <code>⌘K</code> fuzzy search Command Palette, dynamic brand logo resolution engine (Clearbit API), and 1-click cancellation assistant portal integration, reducing search latency to <strong>under 1ms</strong>.</li>
       </ul>
     </div>
 
-    <!-- Project 2: QuantumOS -->
-    <div class="project-item">
-      <div class="project-head">
-        <span class="project-title">QuantumOS — Spatial SaaS & AI-Powered Workspace</span>
-        <span class="project-tech">React, Spring Boot, Spring Security, JPA, PostgreSQL, Docker</span>
+    <!-- QuantumOS -->
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-name">QuantumOS — Spatial SaaS & AI-Powered Workspace</span>
+        <span class="project-tech">React • Spring Boot • Spring Security • PostgreSQL • Docker</span>
       </div>
       <div class="project-links">
-        <a href="https://quantum-os-bzoj.vercel.app">Live Demo</a> |
-        <a href="https://github.com/L-Nithish/QuantumOS">GitHub Code</a> |
-        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/quantumos">Case Study</a>
+        <a href="https://quantum-os-bzoj.vercel.app" target="_blank">Live App Demo</a> |
+        <a href="https://github.com/L-Nithish/QuantumOS" target="_blank">GitHub Code</a> |
+        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/quantumos" target="_blank">Case Study</a>
       </div>
-      <ul>
+      <ul class="bullets">
         <li><strong>Spatial OS UI:</strong> Engineered a high-performance in-browser spatial desktop environment featuring a custom Virtual File System (VFS) and resizable, draggable window managers.</li>
         <li><strong>Sub-50ms AI Mutations:</strong> Developed a custom, rule-based Natural Language Processing (NLP) parser in the Spring Boot service layer to parse chat prompts and mutate database records, reducing transaction latency to <strong>under 50ms</strong>.</li>
         <li><strong>Stateless Security:</strong> Implemented secure user authentication using Spring Security and stateless JWT tokens, protecting private API routes and maintaining session integrity.</li>
       </ul>
     </div>
 
-    <!-- Project 3: Succession AI -->
-    <div class="project-item">
-      <div class="project-head">
-        <span class="project-title">Succession AI — Real-Time WebSocket Interview Sandbox</span>
-        <span class="project-tech">Next.js 16, Spring Boot, WebSockets (STOMP), OpenAI API</span>
+    <!-- Succession AI -->
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-name">Succession AI — Real-Time WebSocket Interview Sandbox</span>
+        <span class="project-tech">Next.js 16 • Spring Boot • WebSockets (STOMP) • OpenAI API</span>
       </div>
       <div class="project-links">
-        <a href="https://succession-ai-s4hp.vercel.app">Live Demo</a> |
-        <a href="https://github.com/l-nithish/succession-ai">GitHub Code</a> |
-        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/succession-ai">Case Study</a>
+        <a href="https://succession-ai-s4hp.vercel.app" target="_blank">Live App Demo</a> |
+        <a href="https://github.com/l-nithish/succession-ai" target="_blank">GitHub Code</a> |
+        <a href="https://nithish-portfolio-theta.vercel.app/case-studies/succession-ai" target="_blank">Case Study</a>
       </div>
-      <ul>
+      <ul class="bullets">
         <li><strong>Low-Latency WebSockets:</strong> Engineered a full-duplex communication layer using STOMP over WebSockets (SockJS) to handle real-time chat and coding sandbox events, dropping latency to <strong>under 10ms</strong>.</li>
         <li><strong>Dynamic AI Prompts:</strong> Integrated OpenAI Chat Completion API with structured JSON output to parse candidate resumes, extract core competencies, and dynamically generate technical questions in real-time.</li>
       </ul>
     </div>
 
-    <!-- Project 4: DexterStore -->
-    <div class="project-item">
-      <div class="project-head">
-        <span class="project-title">DexterStore — Decoupled E-Commerce Marketplace</span>
-        <span class="project-tech">React, Spring Boot, Hibernate, REST APIs, PostgreSQL</span>
+    <!-- DexterStore -->
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-name">DexterStore — Decoupled E-Commerce Marketplace</span>
+        <span class="project-tech">React • Spring Boot • Hibernate ORM • PostgreSQL</span>
       </div>
       <div class="project-links">
-        <a href="https://dexterstore.netlify.app">Live Demo</a> |
-        <a href="https://github.com/l-nithish/dexterstore">GitHub Code</a>
+        <a href="https://dexterstore.netlify.app" target="_blank">Live App Demo</a> |
+        <a href="https://github.com/l-nithish/dexterstore" target="_blank">GitHub Code</a>
       </div>
-      <ul>
+      <ul class="bullets">
         <li><strong>Decoupled Architecture:</strong> Designed a decoupled system separating a React storefront from a transactional Spring Boot backend. Managed database transactions using Hibernate ORM to ensure cart persistence.</li>
       </ul>
     </div>
-  </section>
+  </div>
 
   <!-- EDUCATION & CERTIFICATIONS -->
-  <section>
-    <div class="section-title">Education & Professional Training</div>
+  <div class="section">
+    <div class="section-title">Education & Certifications</div>
     
-    <div class="edu-item">
-      <div class="edu-head">
-        <span>Java Full-Stack Development Certification</span>
-        <span>Jan 2025 — Present (Expected 2026)</span>
+    <div style="margin-bottom: 6px;">
+      <div class="edu-row">
+        <span class="edu-degree">Java Full-Stack Development Certification</span>
+        <span class="edu-dates">Jan 2025 — Present (Expected 2026)</span>
       </div>
-      <div class="edu-sub">Qspiders — Chennai, India</div>
-      <ul>
-        <li>Completed 500+ hours of professional training in Core Java, Advanced Database Design, Spring Boot APIs, and React client-side architectures.</li>
+      <div class="edu-school">Qspiders — Chennai, India</div>
+      <ul class="bullets">
+        <li>Undergoing 500+ hours of professional training in Core Java, Advanced Database Design, Spring Boot APIs, and React client-side architectures.</li>
       </ul>
     </div>
 
-    <div class="edu-item">
-      <div class="edu-head">
-        <span>Bachelor of Science in Information Technology (B.Sc. IT)</span>
-        <span>2022 — 2025</span>
+    <div>
+      <div class="edu-row">
+        <span class="edu-degree">Bachelor of Science in Information Technology (B.Sc. IT)</span>
+        <span class="edu-dates">2022 — 2025</span>
       </div>
-      <div class="edu-sub">SRNY College of Arts and Science — Tenkasi, India</div>
-      <ul>
+      <div class="edu-school">SRNY College of Arts and Science — Tenkasi, India</div>
+      <ul class="bullets">
         <li>Focused on computer networking, database management systems (DBMS), Object-Oriented Programming (OOP), and software engineering principles.</li>
       </ul>
     </div>
-  </section>
+  </div>
 
 </div>
 </body>
